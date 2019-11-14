@@ -1,25 +1,50 @@
 {
   "name": "dnd",
   "version": "1.0.0",
-  "description": "",
+  "description": "Forms and Visualizers for a Tabletop RPG",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --progress --colors --watch --mode=development",
+    "prod": "webpack --progress --colors -p --config webpack.config.js --mode=production"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/plugin-proposal-class-properties": "^7.7.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.6.2",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/preset-react": "^7.7.0",
+    "@babel/preset-typescript": "^7.7.2",
     "@types/react": "^16.9.11",
     "@types/react-dom": "^16.9.4",
+    "@types/styled-components": "^4.4.0",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-styled-components": "^1.10.6",
+    "classnames": "^2.2.6",
+    "eslint": "^6.6.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-react": "^7.16.0",
+    "prop-types": "^15.7.2",
     "source-map-loader": "^0.2.4",
-    "ts-loader": "^6.2.1",
     "typescript": "^3.7.2",
     "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.10"
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.7.0",
+    "@types/yup": "^0.26.24",
+    "formik": "^2.0.4",
+    "isomorphic-fetch": "^2.2.1",
+    "mathjs": "^6.2.3",
     "react": "^16.11.0",
-    "react-dom": "^16.11.0"
+    "react-bootstrap": "^1.0.0-beta.14",
+    "react-dom": "^16.11.0",
+    "styled-components": "^4.4.1",
+    "yup": "^0.27.0"
   }
 }

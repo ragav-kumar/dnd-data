@@ -1,30 +1,39 @@
+const path = require('path');
+
 module.exports = {
 	mode: "production",
 	devtool: "source-map",
 
-	resolve: {
-		extensions: [".ts", ".tsx"]
+	entry: {
+		'shortcode': path.resolve(__dirname, 'src/shortcode.js'),
 	},
-
+	output: {
+		filename: '[name].js',
+		path: path.resolve(__dirname, 'js'),
+	},
+	resolve: {
+		extensions: [".ts", ".tsx", ".js", ".jsx"]
+	},
 	module: {
 		rules: [
 			{
-				test: /\.ts(x?)$/,
+				test: /\.[jt]s(x?)$/,
 				exclude: /node_modules/,
-				use: [
-					{
-						loader: "ts-loader"
+				use: {
+					loader: "babel-loader",
+					options: {
+						presets: [
+							'@babel/preset-env',
+							'@babel/preset-react',
+							"@babel/preset-typescript",
+						]
 					}
-				]
+				}
 			}, {
 				enforce: "pre",
 				test: /\.js$/,
 				loader: "source-map-loader"
 			}
 		]
-	},
-	externals: {
-		"react": "React",
-		"react-dom": "ReactDOM"
 	}
 };
