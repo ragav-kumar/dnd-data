@@ -1,65 +1,74 @@
 import * as React from "react";
+import * as Yup from 'yup';
+import styled from 'styled-components'
 import { Formik, Form, Field } from 'formik'
-import * as Yup from 'yup'
 
 import { PlayerName, BackgroundFormState, BackgroundFormProps } from "./types";
-import { LabelledInputProps } from "./LabelledInput";
 import { InputFieldArray } from "./InputFieldArray";
+import { LabelledSelect } from "./LabelledSelect";
+import textFieldData from '../data/textFields.json';
+import { Blurb } from "./Blurb";
 
-// Boils down to: "Everything is required"
-const ValidationSchema = Yup.object().shape({
+const backgroundValidationSchema = Yup.object().shape({
 	player: Yup.number()
-		.notOneOf([PlayerName.None])
+		.notOneOf([PlayerName.None], "Who are you??")
 		.required(),
 	name: Yup.string()
 		.trim()
-		.required(),
+		.required("Please give this character a name."),
 	description: Yup.string()
 		.trim()
-		.required(),
+		.required("Please give this character a description."),
 	thought: Yup.string()
 		.trim()
-		.required(),
+		.required("Show that you've thought about things from their perspective!"),
 	goodPoint: Yup.string()
 		.trim()
-		.required(),
+		.required("Surely there's SOMETHING good about them!"),
 	badPoint: Yup.string()
 		.trim()
-		.required(),
+		.required("No one's perfect... and perfect people would be boring."),
 	quirk: Yup.string()
 		.trim()
-		.required(),
+		.required("Something interesting and quirky! Surely there's something."),
 });
+
 // Dirt simple
 const initialValues: BackgroundFormState = {
-	player: PlayerName.None,
-	name: "",
+	player     : PlayerName.None,
+	name       : "",
 	description: "",
-	thought: "",
-	goodPoint: "",
-	badPoint: "",
-	quirk: "",
+	thought    : "",
+	goodPoint  : "",
+	badPoint   : "",
+	quirk      : "",
 };
 
-const textFieldData: LabelledInputProps[] = [
-	{ name: "name", type: null, label: "Character Name" },
-	{ name: "description", type: "textarea", label: "What do they look like (1-3 sentences)?" },
-	{ name: "thought", type: "textarea", label: "A thought they might think (1-3 sentences)" },
-	{ name: "goodPoint", type: null, label: "One good thing about them" },
-	{ name: "badPoint", type: null, label: "One bad thing about them" },
-	{ name: "quirk", type: null, label: "Something fun / interesting about them" },
-]
+const Hr = styled.hr`
+&&& {
+	width: 100%;
+	max-width: none;
+}`
 
 export const BackgroundForm = (props: BackgroundFormProps) => {
 	return (
 		<Formik
 			initialValues={initialValues}
 			onSubmit={props.handleSubmit}
-			validationSchema={ValidationSchema}
+			validationSchema={backgroundValidationSchema}
 		>
-			{({ errors, touched }) => (
+			{({ values, errors, touched }) => (
 				<Form>
-					<Field name="player" as="select" />
+					<LabelledSelect
+						name="player"
+						label="Select Player"
+						errorMsg={errors.player && touched.player ? errors.player : null}
+					/>
+					{values.player > 0 ? 
+						<Blurb player={values.player} /> :
+						<p>(Select a player to show a race / class summary)</p>
+					}
+					<Hr />
 					<InputFieldArray
 						fieldData={textFieldData}
 						errors={errors}

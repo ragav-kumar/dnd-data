@@ -1,0 +1,100 @@
+{
+	"Rohini": {
+		"race": "Half-elf",
+		"class": "Monk",
+		"raceNotes": [
+			"Stats: High Charisma, can choose other strengths",
+			"Mature at the same speed as humans, but live much longer (>180 yrs)",
+			"Leans chaotic: value individuality and personal freedom, resent rules and demands placed on them",
+			"Can see in dim light"
+		],
+		"classNotes": [
+			"Martial Artist. Basically, incarnation of Wuxia movies",
+			"Raised in a monastery, usually. Doesn't have to be chinese style!",
+			"Can use simple weapons and shortswords, or barehanded.",
+			"Unarmored"
+		]
+	},
+	"Nate": {
+		"race": "Vedalken",
+		"class": "Druid",
+		"raceNotes": [
+			"Nothing is perfect, and nothing can be perfect. They rejoice in this, for they ever seek unattainable perfection",
+			"Typically gregarious, but tend to keep personal details to themselves. Tend to have low interest in emotional matters.",
+			"Age at same rate as humans, lifespan is 350-500 years",
+			"Slightly taller than humans, slender. High Intelligence, decent Wisdom"
+		],
+		"classNotes": [
+			"Nature-themed Magic user",
+			"Close bond with nature; can learn to shapeshift into animals",
+			"High wisdom, usually. Values balance, tends to learn toward neutrality in philosophy",
+			"Eventually gets associated with a specific environment"
+		]
+	},
+	"Yash": {
+		"race": "Aarakocra",
+		"class": "Sorcerer",
+		"raceNotes": [
+			"Originally from the elemental plane of air. They tend to be immigrants / refugees / scouts / explorers. This world is strange to them.",
+			"Basically, tall man-shaped birds. Tend to be most comfortable when in the sky and open places. Claustrophobic.",
+			"Very clean and meticulous. Poor understanding of ownership � leads to a reputation for theft",
+			"Really, really likes shiny things.",
+			"High Dexterity, decent Wisdom."
+		],
+		"classNotes": [
+			"Magic user for whom magic is inborn, part of their blood and being.",
+			"Power comes from mysterious sources: a demons touch, a dryads blessing, contact with raw elemental power, or something inherited are all options",
+			"Tend to be eccentric, with obscure or convoluted motivations for adventuring.",
+			"Power is inborn, and comes from their Charisma. Sorcerous Origin determines the source of power"
+		]
+	},
+	"Ayush": {
+		"race": "Dragonborn",
+		"class": "Warlock",
+		"raceNotes": [
+			"Children of dragons, their heritage shows in their scales and proud bearing.",
+			"Devoted to clan above all else. Motivation should be somehow tied to this!",
+			"Always seeking self-improvement. Also, tend to avoid seeking aid from outsiders.",
+			"High strength, decent Charisma"
+		],
+		"classNotes": [
+			"Someone who has made a pact with an otherworldly being",
+			"Can be: Demon Prince, Archdevil, Outsider (aka something Lovecraftian)",
+			"Relationship can be master-servant, or teacher-apprentice",
+			"Competent at hand-to-hand combat",
+			"Insatiable need for knowledge and power"
+		]
+	},
+	"Jayanthi": {
+		"race": "Elf",
+		"class": "Ranger",
+		"raceNotes": [
+			"A magical people of otherworldly grace. Love nature, magic, and the arts. Kinda stuck-up, a lot of the time.",
+			"Tend to be slightly short, and quite slender. Little differentiation between the sexes. Can have very unusual hair and skin colours.",
+			"Tend to live >700 years, maturing after ~100 years.",
+			"High dexterity. Can see in dim light."
+		],
+		"classNotes": [
+			"Like a druid, has a close bond with nature. If the druid is a priest of nature, then the ranger is its guardian",
+			"Associated with speed, stealth, and hunting (but in wilderness, contrasted with the urban rogue)",
+			"Fiercely independent, very effective and competent when in the wild. Great at tracking.",
+			"Has a 'favoured enemy', which they are particularly effective against"
+		]
+	},
+	"Vijay": {
+		"race": "Tiefling",
+		"class": "Rogue",
+		"raceNotes": [
+			"Typically greeted with stares and mistrust, and abused for their heritage.",
+			"Offspring of humans and infernals (demons & devils). Horns, tails, sharp teeth, weird skin colours",
+			"No real homeland. Tend to be self-reliant and suspicious.",
+			"Lifespan is similar to humans. Decent intelligence, High charisma. Resistant to fire."
+		],
+		"classNotes": [
+			"Relies on skill, stealth, and attacks of opportunity",
+			"Tends to have an antagonistic relationship with the law",
+			"Underside of society, and thus leans chaotic.",
+			"Prefers cunning (i.e. indirect approaches to solutions)"
+		]
+	}
+}

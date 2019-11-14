@@ -28,9 +28,12 @@ class RestEndPoints {
 	 */
 	function writeBackground(\WP_REST_Request $data):array {
 		$params = $data->get_params();
-		//TODO:
+		$args = [];
+		foreach (Database::FIELDS as $field) {
+			$args[$field] = $params[$field];
+		}
 		return [
-			'success' => false,
+			'success' => Database::write($args),
 		];
 	}
 }

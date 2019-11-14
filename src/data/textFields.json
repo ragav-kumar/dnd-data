@@ -1,0 +1,44 @@
+[
+	{
+		"name": "name",
+		"type": null,
+		"label": "Character Name",
+		"sample": "Raps Sackville"
+	},
+	{
+		"name": "history",
+		"type": "textarea",
+		"label": "Their life until now, and why they became an adventurer (3-5 sentences)?",
+		"sample": "Raps' father was a bit crazy, and taught Raps to fear everything and everyone. Raps was then trained by an evil Dragonborn wizard, who eventually decided to sacrifice him in a dread ritual after realizing how poor Raps was at offensive spells; Raps responded through liberal use of Expeditious Retreat. He's stayed on the move ever since, resorting (unwillingly) to adventuring to make ends meet."
+	},
+	{
+		"name": "description",
+		"type": "textarea",
+		"label": "What do they look like (3-5 sentences)?",
+		"sample": "Raps is wearing a faded orange(ish) mage's robe, which has been patched a few times. He has a long face, with limp, black hair and a perpetual 5 o'clock shadow - which has been known to inch towards a ragged beard depending on how much money he's got. The spellbook at his waist is a cheap, hand-bound thing with a black burnt corner."
+	},
+	{
+		"name": "thought",
+		"type": "textarea",
+		"label": "A thought they might think, in their own words (3-5 sentences)",
+		"sample": "I don't wanna be here. I wanna go home. I should have been a cleric. Healing, protecting, safe inside a temple... not in harms way. Why couldn't I have been a cleric?"
+	},
+	{
+		"name": "goodPoint",
+		"type": "textarea",
+		"label": "One good thing about them",
+		"sample": "He's very alert and aware of changes in his environment. You never know when an owlbears is going to jump out to eat you!"
+	},
+	{
+		"name": "badPoint",
+		"type": "textarea",
+		"label": "One bad thing about them",
+		"sample": "He's squeamish, and thus really, really dislikes active combat spells, like fireball. He tends to fumble those spells."
+	},
+	{
+		"name": "quirk",
+		"type": "textarea",
+		"label": "Something fun / interesting about them",
+		"sample": "Raps always has the spell \"Expeditious Retreat\" prepared. Always. Also, he's got agoraphobia, but no one ever notices, so he's perpetually scared anyway."
+	}
+]

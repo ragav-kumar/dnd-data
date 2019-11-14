@@ -1,13 +1,13 @@
 import { FormikHelpers } from "formik";
 
 export enum PlayerName {
-	None,
+	None = 0,
 	Rohini,
 	Nate,
 	Jayanthi,
 	Vijay,
 	Yash,
-	Ayush
+	Ayush,
 }
 
 export interface BackgroundFormState {

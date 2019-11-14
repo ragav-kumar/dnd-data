@@ -11,6 +11,7 @@ class Core {
 		add_action('wp_enqueue_scripts', [$this, 'enqueue']);
 
 		add_shortcode('dnd-character-background-form', [$this, 'shortcode']);
+		Database::init();
 
 		new RestEndPoints();
 	}

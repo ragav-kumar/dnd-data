@@ -40,3 +40,5 @@ spl_autoload_register(function($class) {
 
 // All business code is in /includes
 new \DnD\Core();
+
+\register_activation_hook( __FILE__, ['DnD\Database', 'dbCreate']);
