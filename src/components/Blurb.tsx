@@ -43,7 +43,6 @@ export const Blurb = (props : BlurbProps) => {
 
 	React.useEffect(() => {
 		const name = PlayerName[props.player];
-		console.log(name, props.player, data[name]);
 		setBlurb(props.player > 0 ? data[name] : emptyBlurb);
 	}, [props.player])
 

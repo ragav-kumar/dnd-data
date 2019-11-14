@@ -29,7 +29,7 @@ class Core {
 	}
 	function shortcode() {
 		wp_localize_script('dnd_char_background_script', 'dnd_object', [
-			'api_nonce' => wp_create_nonce('dnd_nonce'),
+			'api_nonce' => wp_create_nonce('wp_rest'),
 			'api_url'   => rest_url('/' . RestEndPoints::REST_NAMESPACE . '/'),
 		]);
 		wp_enqueue_script('dnd_char_background_script');
