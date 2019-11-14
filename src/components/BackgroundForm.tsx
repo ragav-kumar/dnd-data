@@ -56,7 +56,8 @@ export const BackgroundForm = (props: BackgroundFormProps) => {
 			initialValues={initialValues}
 			onSubmit={props.handleSubmit}
 			validationSchema={ValidationSchema}
-			render={({ errors, touched }) => (
+		>
+			{({ errors, touched }) => (
 				<Form>
 					<Field name="player" as="select" />
 					<InputFieldArray
@@ -64,9 +65,9 @@ export const BackgroundForm = (props: BackgroundFormProps) => {
 						errors={errors}
 						touched={touched}
 					/>
-					<Field name="submit" type="submit" value="Submit" />
+					<Field name="submit" type="submit" component="input" value="Submit" />
 				</Form>
 			)}
-		/>
+		</Formik>
 	)
 }

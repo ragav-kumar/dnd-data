@@ -1,8 +1,28 @@
 import * as React from "react";
-import * as styled from 'styled-components'
+import styled from 'styled-components'
 import { Field } from "formik";
 import Overlay from 'react-bootstrap/Overlay'
 import Tooltip from 'react-bootstrap/Tooltip'
+
+const Wrap = styled.div`
+	display: grid;
+	grid-template-columns: [labelledField] 3fr [error] 1fr;
+	column-gap: 1em;
+`
+const Label = styled.label`
+	grid-column: labelledField;
+	display: grid;
+	grid-template-columns: [label] 1fr [field] 2fr;
+	column-gap: 10px;
+	span {
+		grid-column: label;
+	}
+`;
+const StyledField = styled(Field)` grid-column: field; `
+const ErrorMsg = styled.div`
+	grid-column: error;
+	color: red;
+`;
 
 export interface LabelledInputProps {
 	type?: string // Can use the default of "input" if needed
@@ -14,22 +34,15 @@ export interface LabelledInputProps {
 export const LabelledInput = (props : LabelledInputProps) => {
 	const target = React.useRef(null)
 	return (
-		<label>
-			<span>{props.label}</span>
-			<Field
-				name={props.name}
-				type={props.type ? props.type : null}
-				ref={target}
-			/>
-			<Overlay
-				target={target.current}
-				show={!!props.errorMsg}
-				placement="right"
-			>
-				{(ttProps : any) => (
-					<Tooltip {...ttProps}>{props.errorMsg}</Tooltip>
-				)}
-			</Overlay>
-		</label>
+		<Wrap>
+			<Label ref={target}>
+				<span>{props.label}</span>
+				<StyledField
+					name={props.name}
+					component={props.type ? props.type : null}
+				/>
+			</Label>
+			{!!props.errorMsg ? <ErrorMsg>{props.errorMsg}</ErrorMsg> : null}
+		</Wrap>
 	)
 }

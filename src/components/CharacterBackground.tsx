@@ -1,8 +1,16 @@
 import * as React from "react";
-import * as styled from 'styled-components'
 
+import {FormikHelpers} from 'formik';
 import { BackgroundForm } from "./BackgroundForm";
+import { BackgroundFormState } from "./types";
 
 export const CharacterBackground = () => {
-	return (<p>TODO</p>)
+	const handleSubmit = (values: BackgroundFormState, form: FormikHelpers<BackgroundFormState>) => {
+		console.log(values);
+	}
+	return (
+		<BackgroundForm
+			handleSubmit={handleSubmit}
+		/>
+	)
 }

@@ -15,6 +15,7 @@ export const InputFieldArray = (props: InputFieldArrayProps) => {
 		fields.push(
 			<LabelledInput
 				{...f}
+				key={f.name}
 				errorMsg={props.errors.name && props.touched.name ? props.errors.name : null}
 			/>
 		);
