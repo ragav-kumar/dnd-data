@@ -3,18 +3,18 @@
 		"name": "name",
 		"type": null,
 		"label": "Character Name",
-		"sample": "Raps Sackville"
+		"sample": "Raps Sackville (Each race has typical names associated with it, be sure to Google it)"
 	},
 	{
 		"name": "history",
 		"type": "textarea",
-		"label": "Their life until now, and why they became an adventurer (3-5 sentences)?",
-		"sample": "Raps' father was a bit crazy, and taught Raps to fear everything and everyone. Raps was then trained by an evil Dragonborn wizard, who eventually decided to sacrifice him in a dread ritual after realizing how poor Raps was at offensive spells; Raps responded through liberal use of Expeditious Retreat. He's stayed on the move ever since, resorting (unwillingly) to adventuring to make ends meet."
+		"label": "Their life until now, and why they became an adventurer:",
+		"sample": "Raps' father was a bit crazy, and taught Raps to fear everything and everyone. Raps was then trained by an evil Dragonborn wizard, who eventually decided to sacrifice him in a dread ritual after realizing how poor Raps was at offensive spells; Raps responded through liberal use of the spell 'Expeditious Retreat'. He's stayed on the move ever since, resorting (unwillingly) to adventuring to make ends meet."
 	},
 	{
 		"name": "description",
 		"type": "textarea",
-		"label": "What do they look like (3-5 sentences)?",
+		"label": "What do they look like?",
 		"sample": "Raps is wearing a faded orange(ish) mage's robe, which has been patched a few times. He has a long face, with limp, black hair and a perpetual 5 o'clock shadow - which has been known to inch towards a ragged beard depending on how much money he's got. The spellbook at his waist is a cheap, hand-bound thing with a black burnt corner."
 	},
 	{
@@ -27,7 +27,7 @@
 		"name": "goodPoint",
 		"type": "textarea",
 		"label": "One good thing about them",
-		"sample": "He's very alert and aware of changes in his environment. You never know when an owlbears is going to jump out to eat you!"
+		"sample": "He's very alert and aware of changes in his environment. You never know when an owlbear is going to jump out of the bushes to eat you!"
 	},
 	{
 		"name": "badPoint",
@@ -39,6 +39,6 @@
 		"name": "quirk",
 		"type": "textarea",
 		"label": "Something fun / interesting about them",
-		"sample": "Raps always has the spell \"Expeditious Retreat\" prepared. Always. Also, he's got agoraphobia, but no one ever notices, so he's perpetually scared anyway."
+		"sample": "Raps always has the spell \"Expeditious Retreat\" prepared. Always. Also, he's got agoraphobia, but no one ever notices, since he's perpetually scared anyway."
 	}
 ]
