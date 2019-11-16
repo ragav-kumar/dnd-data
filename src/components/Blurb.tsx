@@ -28,12 +28,14 @@ export interface BlurbProps {
 interface BlurbType {
 	race: string,
 	class: string,
+	link: string,
 	raceNotes: string[],
 	classNotes: string[],
 }
 const emptyBlurb : BlurbType = {
 	race: "",
 	class: "",
+	link: "",
 	raceNotes: [],
 	classNotes: [],
 }
@@ -59,6 +61,7 @@ export const Blurb = (props : BlurbProps) => {
 		<Wrap>
 			<Column>
 				<h3>{blurb.race}</h3>
+				<a href={blurb.link}>Sample Names</a>
 				<ul>{raceList}</ul>
 			</Column>
 			<Column>

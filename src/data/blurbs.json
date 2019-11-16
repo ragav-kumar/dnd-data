@@ -2,6 +2,7 @@
 	"Rohini": {
 		"race": "Half-elf",
 		"class": "Monk",
+		"link": "https://www.fantasynamegenerators.com/half-elf-names.php",
 		"raceNotes": [
 			"Stats: High Charisma, can choose other strengths",
 			"Mature at the same speed as humans, but live much longer (>180 yrs)",
@@ -18,6 +19,7 @@
 	"Nate": {
 		"race": "Vedalken",
 		"class": "Druid",
+		"link": "https://www.fantasynamegenerators.com/dnd-vedalken-names.php",
 		"raceNotes": [
 			"Nothing is perfect, and nothing can be perfect. They rejoice in this, for they ever seek unattainable perfection",
 			"Typically gregarious, but tend to keep personal details to themselves. Tend to have low interest in emotional matters.",
@@ -34,6 +36,7 @@
 	"Yash": {
 		"race": "Aarakocra",
 		"class": "Sorcerer",
+		"link": "https://www.fantasynamegenerators.com/dnd-aarakocra-names.php",
 		"raceNotes": [
 			"Originally from the elemental plane of air. They tend to be immigrants / refugees / scouts / explorers. This world is strange to them.",
 			"Basically, tall man-shaped birds. Tend to be most comfortable when in the sky and open places. Claustrophobic.",
@@ -51,6 +54,7 @@
 	"Ayush": {
 		"race": "Dragonborn",
 		"class": "Warlock",
+		"link": "https://www.fantasynamegenerators.com/dragonkin-names.php",
 		"raceNotes": [
 			"Children of dragons, their heritage shows in their scales and proud bearing.",
 			"Devoted to clan above all else. Motivation should be somehow tied to this!",
@@ -68,6 +72,7 @@
 	"Jayanthi": {
 		"race": "Elf",
 		"class": "Ranger",
+		"link": "https://www.fantasynamegenerators.com/elf_names.php",
 		"raceNotes": [
 			"A magical people of otherworldly grace. Love nature, magic, and the arts. Kinda stuck-up, a lot of the time.",
 			"Tend to be slightly short, and quite slender. Little differentiation between the sexes. Can have very unusual hair and skin colours.",
@@ -84,6 +89,7 @@
 	"Vijay": {
 		"race": "Tiefling",
 		"class": "Rogue",
+		"link": "https://neverwinter.gamepedia.com/Tiefling#Names",
 		"raceNotes": [
 			"Typically greeted with stares and mistrust, and abused for their heritage.",
 			"Offspring of humans and infernals (demons & devils). Horns, tails, sharp teeth, weird skin colours",
