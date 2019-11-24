@@ -19,6 +19,10 @@ class RestEndPoints {
 			'methods'  => ['POST'],
 			'callback' => [$this, 'writeBackground'],
 		]);
+		register_rest_route(self::REST_NAMESPACE, 'background/read/(?P<player>\w+)', [
+			'methods'  => ['GET', 'POST'],
+			'callback' => [$this, 'readBackground'],
+		]);
 	}
 	/**
 	 * Writes Character Background information
@@ -34,6 +38,26 @@ class RestEndPoints {
 		}
 		return [
 			'success' => Database::write($args),
+		];
+	}
+	/**
+	 * Reads Character Background information
+	 *
+	 * @param \WP_REST_Request $data
+	 * @return array
+	 */
+	function readBackground(\WP_REST_Request $data):array {
+		$player = $data->get_param('player');
+		if (!in_array($player, Database::PLAYERS)) {
+			return [
+				'success' => false,
+				'error' => "Invalid Player name",
+			];
+		}
+		$row = Database::read($player);
+		return [
+			'success' => true,
+			'data' => $row,
 		];
 	}
 }

@@ -61,7 +61,7 @@ export const Blurb = (props : BlurbProps) => {
 		<Wrap>
 			<Column>
 				<h3>{blurb.race}</h3>
-				<a href={blurb.link}>Sample Names</a>
+				<a href={blurb.link} target="_blank">Sample Names</a>
 				<ul>{raceList}</ul>
 			</Column>
 			<Column>

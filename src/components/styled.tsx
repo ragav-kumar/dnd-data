@@ -1,7 +1,12 @@
 import * as React from 'react'
-import styled from 'styled-components'
+import styled, {css} from 'styled-components'
 import {Field} from 'formik'
 
+
+export const TextWrap = styled.div.attrs((props:any) => {})`
+	margin: 1em 0;
+	border-top: ${(props:any) => props.noBorder ? "0" : "1"}px solid grey;
+`;
 export const Wrap = styled.div`
 	display: grid;
 	grid-template-columns: [labelledField] 3fr [error] 1fr;
@@ -10,17 +15,25 @@ export const Wrap = styled.div`
 		"sample -";
 	column-gap: 1em;
 `
-export const StyledField = styled(Field)`
+const fieldCss = css`
 	grid-column: field;
 	padding: 2px 5px;
 	font-size: 14pt;
+`;
+export const StyledField = styled(Field)`
+	${fieldCss}
 	min-height: ${props => props.component === 'textarea' ? "8em" : null};
 `
+export const ProfileText = styled.div`
+	${fieldCss}
+`;
+
 export const ErrorMsg = styled.div`
 	grid-column: error;
 	color: red;
 	font-size: 12pt;
 `;
+export const BoldSpan = styled.span` font-weight: bold; `
 export const Label = styled.label`
 	grid-column: labelledField;
 	display: grid;

@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { FormikErrors, FormikTouched } from 'formik'
-import { BackgroundFormState } from "./types"
-import { LabelledInput, LabelledInputProps } from "./LabelledInput"
+import { BackgroundFormState, LabelledInputProps } from "./types"
+import { LabelledInput } from "./LabelledInput"
 
 export interface InputFieldArrayProps {
 	fieldData: LabelledInputProps[];

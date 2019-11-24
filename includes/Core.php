@@ -19,7 +19,7 @@ class Core {
 		wp_register_script(
 			'dnd_char_background_script',
 			\DND_PLUGIN_URL . 'js/shortcode.js',
-			['react'], "0.1"
+			['react'], "1.1"
 		);
 		wp_enqueue_style(
 			'bootstrap',

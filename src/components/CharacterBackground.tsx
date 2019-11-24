@@ -2,11 +2,12 @@ import * as React from "react";
 
 import {FormikHelpers} from 'formik';
 import { BackgroundForm } from "./BackgroundForm";
-import { BackgroundFormState, PlayerName } from "./types";
+import {Tabs, Tab} from "react-bootstrap";
+import { BackgroundFormState, PlayerName, PlayerProfile } from "./types";
 import {fetchWP} from "../fetchWP";
+import { ProfileForm } from "./ProfileForm";
 
 const blurbData: any = require('../data/blurbs.json');
-
 
 interface CharacterBackgroundProps {
 	wpObject: {
@@ -16,6 +17,10 @@ interface CharacterBackgroundProps {
 }
 
 export const CharacterBackground = (props : CharacterBackgroundProps) => {
+	const [activeProfile, setActiveProfile] = React.useState<PlayerProfile>({});
+	const [activePlayer, setActivePlayer] = React.useState(PlayerName.None);
+	const [loading, setLoading] = React.useState(false);
+
 	const fetch = fetchWP( props.wpObject.api_url, props.wpObject.api_nonce );
 
 	const handleSubmit = (values: BackgroundFormState, form: FormikHelpers<BackgroundFormState>) => {
@@ -36,9 +41,41 @@ export const CharacterBackground = (props : CharacterBackgroundProps) => {
 			err => console.log(err)
 		)
 	}
+	const getProfile = (player: PlayerName) => {
+		setLoading(true);
+		setActivePlayer(player);
+		const name = PlayerName[player];
+		console.log(name);
+		fetch(`background/read/${name}`, {}).then(
+			json => {
+				if (json.success) {
+					setActiveProfile({
+						player,
+						...json.data
+					});
+				} else {
+					alert("Unable to retrieve profile data: " + json.error);
+					console.log(json.error);
+				}
+			},
+			err => console.log(err)
+		).finally( () => setLoading(false));
+	}
+
+
 	return (
-		<BackgroundForm
-			handleSubmit={handleSubmit}
-		/>
+		<Tabs defaultActiveKey="form" id="tab-select">
+			<Tab title="Form" eventKey="form">
+				<BackgroundForm handleSubmit={handleSubmit} />
+			</Tab>
+			<Tab title="Profiles" eventKey="profile">
+				<ProfileForm
+					player={activePlayer}
+					onChange={getProfile}
+					profile={activeProfile}
+					isLoading={loading}
+				/>
+			</Tab>
+		</Tabs>
 	)
 }

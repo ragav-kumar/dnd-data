@@ -6,6 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 class Database {
 	const TABLE = "dnd_background";
 	const FIELDS = ['player', 'race', 'class', 'name', 'history', 'description', 'thought', 'goodPoint', 'badPoint', 'quirk'];
+	const PLAYERS = [ "Rohini", "Nate", "Jayanthi", "Vijay", "Yash", "Ayush" ];
 
 	private function __construct() {
 	}
@@ -27,6 +28,27 @@ class Database {
 	static function write(array $data):bool {
 		global $wpdb;
 		return boolval($wpdb->insert($wpdb->dndTable, $data, '%s'));
+	}
+	/**
+	 * Retrieve player profile
+	 *
+	 * @param string $player
+	 * @return object|null
+	 */
+	static function read(string $player) {
+		global $wpdb;
+		$query = $wpdb->prepare(
+			"SELECT D.*
+			FROM `{$wpdb->dndTable}` D
+			INNER JOIN (
+				SELECT MAX(`id`) AS `pid`
+				FROM `{$wpdb->dndTable}`
+				WHERE `player`=%s
+			) I ON D.`id`=I.`pid`",
+			$player
+		);
+		// error_log($query);
+		return $wpdb->get_row($query);
 	}
 	/**
 	 * Create DB Table if doesn't exist.
