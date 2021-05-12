@@ -42,7 +42,7 @@
     "@babel/polyfill": "^7.7.0",
     "formik": "^2.0.6",
     "isomorphic-fetch": "^2.2.1",
-    "mathjs": "^6.2.5",
+    "mathjs": "^7.5.1",
     "react": "^16.12.0",
     "react-bootstrap": "^1.0.0-beta.16",
     "react-dom": "^16.12.0",
